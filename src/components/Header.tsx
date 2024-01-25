@@ -46,13 +46,13 @@ export default function Header() {
                 <div className="hidden space-x-2 lg:block">
                     <Link
                         href={authStatus ? "/profile" : "/signup"}
-                        className="rounded-md bg-transparent px-3 py-2 text-sm font-semibold text-primary hover:bg-primary/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                        className=" bg-transparent px-3 py-2 text-sm font-semibold font- text-black rounded-md border-2 border-blue-200 hover:bg-blue-300 font-serif" 
                     >
                         {authStatus ? "Profile" : "Sign up"}
                     </Link>
                     <Link
                         href={authStatus ? "/logout" : "/login"}
-                        className="rounded-md border border-primary px-3 py-2 text-sm font-semibold text-primary shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                        className="rounded-md border-2 border-blue-200 px-3 py-2 text-sm font-semibold text-black font-serif shadow-sm  hover:bg-blue-300"
                     >
                         {authStatus ? "Logout" : "Log In"}
                     </Link>

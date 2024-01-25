@@ -16,7 +16,7 @@ const Signup = () => {
         name: "",
     });
     const [error, setError] = useState("");
-
+    toast.success("user signed up successfully");
     const { setAuthStatus } = useAuth();
     
     const [loading,setLoading] = useState(false);
@@ -27,10 +27,10 @@ const Signup = () => {
             
             setLoading(true);
             const userData = await appwriteService.createUserAccount(formData);      
+                          toast.success("user signed up successfully");
             if (userData) {
                 setAuthStatus(true);
                 console.log(userData);
-                toast.success("user signed up successfully");
                 setLoading(false);
                 router.push('/login');
                 

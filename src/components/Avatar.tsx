@@ -6,7 +6,7 @@ type Props ={
 }
 const Avatar: React.FC<Props> = ({img,alt}) => {
  return(
-    <div className="rounded-full overflow-hidden w-full pt-[100%] relative">
+    <div className="  rounded-full  overflow-hidden w-full pt-[100%] relative">
         <div className="absolute inset-8">
             <img src={img} alt={alt || img} />
 

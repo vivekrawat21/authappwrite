@@ -4,7 +4,7 @@ import appwriteService from '@/appwrite/config';
 import useAuth from '@/context/useAuth';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import toast from 'react-hot-toast';
+import {toast} from 'react-hot-toast';
 
 
 
@@ -24,9 +24,9 @@ function Login() {
         try {
             setLoading(true);
             const session =await appwriteService.login(formData);
+            toast.success("Login successful");
             if (session){
                 setAuthStatus(true);
-                toast.success("Login successful");
                 router.push('/profile');
                 setLoading(false);
 
@@ -53,13 +53,13 @@ function Login() {
         </div>
         <h2 className='text-center text-2xl font-bold leading-tight text-black'>
 
-            Login
+            Sign in to your account
 
         </h2>
         <p className='mt-2 text-center text-base text-gray-600'>
 
             not have an account?&nbsp;
-            <Link href="/Signup"
+            <Link href="/signup"
                 className='font-medium text-blue-600 transition-all duration-200 hover:underline'>
                Signup
             </Link>
